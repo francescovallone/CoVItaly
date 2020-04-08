@@ -14,7 +14,7 @@ import 'package:url_launcher/url_launcher.dart';
 Future<CovidN> fetchCovidNational() async {
   final result = await http.get('https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-json/dpc-covid19-ita-andamento-nazionale.json');
   if (result.statusCode == 200) {
-    return CovidN.fromJson(json.decode(response.body));
+    return CovidN.fromJson(json.decode(result.body));
   } else {
     throw Exception('Failed to load data');
   }
