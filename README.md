@@ -14,5 +14,5 @@ If you want to contribute you can open an issue asking for a feature or suggesti
 
 ## License
 
-The data used in this app are licensed under [CC-BY-4.0 - View license](https://github.com/pcm-dpc/COVID-19/blob/master/LICENSE)
+The data used in this app are licensed under [CC-BY-4.0 - View license](https://github.com/pcm-dpc/COVID-19/blob/master/LICENSE).<br>
 Licensed under MIT.
