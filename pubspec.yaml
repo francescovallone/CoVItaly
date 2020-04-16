@@ -1,8 +1,11 @@
 name: CoVItaly
 description: An app that fetches data from the repository of the Protezione Civile Italiana
 
+publish_to: 'none'
+version: 1.0.0+1
+
 environment:
-  sdk: '>=2.5.0 <3.0.0'
+  sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
   url_launcher: ^5.4.2
@@ -12,6 +15,7 @@ dependencies:
   http: ^0.12.0+4
   flutter:
     sdk: flutter
+  cupertino_icons: ^0.1.3
 
 dev_dependencies:
   flutter_test:

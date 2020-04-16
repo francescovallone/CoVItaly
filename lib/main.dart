@@ -2,9 +2,8 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-import 'dart:convert';
 import 'dart:async';
-
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/gestures.dart';
@@ -172,6 +171,7 @@ class CoVItaly extends StatefulWidget {
 class _CoVItalyState extends State<CoVItaly> {
   Future<CovidN> futureCovid;
   List<dynamic> provinces = List<dynamic>();
+
   @override
   void initState() {
     super.initState();
@@ -257,7 +257,7 @@ class _CoVItalyState extends State<CoVItaly> {
                       if(value.isNotEmpty && value != null) {
                         List<dynamic> dummyListData = List<dynamic>();
                         dummySearchList.forEach((item) {
-                          if(item['denominazione_provincia'].toLowerCase().contains(value.toLowerCase())) {
+                          if(item['denominazione_provincia'].toLowerCase().contains(value.toLowerCase()) == true) {
                             dummyListData.add(item);
                           }
                         });
@@ -290,7 +290,7 @@ class _CoVItalyState extends State<CoVItaly> {
                         children: <Widget>[
                           ListTile(
                             title: Text("${provinces[index]['denominazione_provincia']} (${provinces[index]['denominazione_regione']})"),
-                            subtitle: Text("Totale Casi: ${provinces[index]['totale_casi']} in data ${date}"),
+                            subtitle: Text("Totale Casi: ${provinces[index]['totale_casi']} in data $date"),
                           )
                         ],
                       );
